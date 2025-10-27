@@ -946,8 +946,8 @@
                 "text": "Control server"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1044,12 +1044,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "773c5d03-db3a-48f8-be3f-935860d66d7b",
+                  "title": "spoofing",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Lack of identity validation for PLC/field devices allows forged telemetry.",
+                  "mitigation": "Use signed messages, TLS/mTLS between components, and device allow-listing.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -1174,6 +1196,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 1
+    "threatTop": 2
   }
 }
