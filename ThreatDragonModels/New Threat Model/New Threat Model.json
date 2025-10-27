@@ -26,14 +26,19 @@
               "width": 490,
               "height": 620
             },
+            "attrs": {
+              "label": {
+                "text": "internal network"
+              }
+            },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "a6d001a9-2fdb-421c-824c-94ab06198d19",
             "zIndex": -1,
+            "id": "a6d001a9-2fdb-421c-824c-94ab06198d19",
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Trust Boundary",
-              "description": "",
+              "name": "internal network",
+              "description": "internet\n\n",
               "isTrustBoundary": true,
               "hasOpenThreats": false
             }
@@ -56,6 +61,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -139,7 +145,6 @@
               ]
             },
             "id": "37aafa70-5cea-48a0-a86d-e0d61fa6e6be",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Actor",
@@ -172,7 +177,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "HTTP request",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -185,7 +190,7 @@
               "threats": []
             },
             "labels": [
-              "Data Flow"
+              "HTTP request"
             ],
             "id": "0f6f38e1-d4f8-46a6-93fb-95acc757a9f5",
             "source": {
@@ -217,7 +222,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "query process data",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -230,7 +235,7 @@
               "threats": []
             },
             "labels": [
-              "Data Flow"
+              "query process data"
             ],
             "id": "c72f6be3-4a7d-4b1e-aeb2-6da8eace7054",
             "source": {
@@ -262,7 +267,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "control commands",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -275,148 +280,7 @@
               "threats": []
             },
             "labels": [
-              "Data Flow"
-            ],
-            "id": "26441c0d-4448-4374-95fb-595a8b799221",
-            "source": {
-              "x": 570,
-              "y": 390
-            },
-            "target": {
-              "x": 980,
-              "y": 700
-            },
-            "vertices": [
-              {
-                "x": 590,
-                "y": 690
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "7cd5ce3a-1c0a-462e-88bb-e4ac94a6ac17",
-            "source": {
-              "x": 570,
-              "y": 300
-            },
-            "target": {
-              "x": 870,
-              "y": 130
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "bf33406d-8d4c-47ed-8fd8-d170b6f94476",
-            "source": {
-              "cell": "cf4b2fca-947f-473a-a644-d47a6fba299c",
-              "port": "8ae89fca-2c2c-446d-a1e9-c6446e3d9a98"
-            },
-            "target": {
-              "cell": "22011c84-9c40-45b4-9ba1-ee4d292b4410",
-              "port": "c3c0af89-47a1-40d9-b315-cb65fea66e91"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Data Flow"
+              "control commands"
             ],
             "id": "4f4dce66-e1a1-4e8e-afee-50b09a97a5f4",
             "source": {
@@ -426,7 +290,8 @@
             "target": {
               "x": 1170,
               "y": 240
-            }
+            },
+            "vertices": []
           },
           {
             "shape": "flow",
@@ -448,7 +313,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Telemetry feedback",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -461,7 +326,7 @@
               "threats": []
             },
             "labels": [
-              "Data Flow"
+              "Telemetry feedback"
             ],
             "id": "23c29b86-fde3-4088-bbe0-f23a4ce65648",
             "source": {
@@ -476,6 +341,10 @@
               {
                 "x": 1170,
                 "y": 479
+              },
+              {
+                "x": 1170,
+                "y": 500
               }
             ]
           },
@@ -499,7 +368,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Sensor data",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -512,7 +381,7 @@
               "threats": []
             },
             "labels": [
-              "Data Flow"
+              "Sensor data"
             ],
             "id": "22ddb8f1-59f8-4a23-b084-e79eca96b398",
             "source": {
@@ -535,6 +404,159 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "System configuration store",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "System configuration store"
+            ],
+            "id": "48cfffb8-cb67-4a52-b22a-967892894a22",
+            "source": {
+              "x": 560,
+              "y": 400
+            },
+            "target": {
+              "cell": "54864b68-7021-4826-b997-6e01bfedc12f",
+              "port": "eb3ba845-2ad5-4011-9220-e38d5d3c69eb"
+            },
+            "vertices": [
+              {
+                "x": 600,
+                "y": 685
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "API calls",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "API calls"
+            ],
+            "id": "ddbe6c6c-0140-423f-a1ee-1197dccb8efb",
+            "source": {
+              "x": 590,
+              "y": 330
+            },
+            "target": {
+              "cell": "cf4b2fca-947f-473a-a644-d47a6fba299c",
+              "port": "8ae89fca-2c2c-446d-a1e9-c6446e3d9a98"
+            },
+            "vertices": [
+              {
+                "x": 640,
+                "y": 390
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "f9630f5d-e6c0-4acc-9b6e-5a2c49b00960",
+            "source": {
+              "x": 569,
+              "y": 290
+            },
+            "target": {
+              "x": 880,
+              "y": 170
+            },
+            "vertices": [
+              {
+                "x": 690,
+                "y": 240
+              }
+            ]
+          },
+          {
             "position": {
               "x": 470,
               "y": 260
@@ -544,6 +566,9 @@
               "height": 150
             },
             "attrs": {
+              "text": {
+                "text": "Scada web interface"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -552,6 +577,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -635,10 +661,9 @@
               ]
             },
             "id": "22011c84-9c40-45b4-9ba1-ee4d292b4410",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
-              "name": "Process",
+              "name": "Scada web interface",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -661,6 +686,9 @@
               "height": 130
             },
             "attrs": {
+              "text": {
+                "text": "Database"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -669,6 +697,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -752,10 +781,9 @@
               ]
             },
             "id": "d5459573-9751-4e1c-934a-8c3dc688306d",
-            "zIndex": 12,
             "data": {
               "type": "tm.Actor",
-              "name": "Actor",
+              "name": "Database",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -775,6 +803,9 @@
               "height": 170
             },
             "attrs": {
+              "text": {
+                "text": "Scada web interface"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -783,6 +814,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -866,10 +898,9 @@
               ]
             },
             "id": "cf4b2fca-947f-473a-a644-d47a6fba299c",
-            "zIndex": 13,
             "data": {
               "type": "tm.Process",
-              "name": "Process",
+              "name": "Scada web interface",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -892,6 +923,9 @@
               "height": 160
             },
             "attrs": {
+              "text": {
+                "text": "Control server"
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -900,6 +934,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -983,10 +1018,9 @@
               ]
             },
             "id": "1dd0583a-3d46-4628-b219-a07ca88c2611",
-            "zIndex": 14,
             "data": {
               "type": "tm.Process",
-              "name": "Process",
+              "name": "Control server",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1009,6 +1043,9 @@
               "height": 150
             },
             "attrs": {
+              "text": {
+                "text": "Devices "
+              },
               "body": {
                 "stroke": "#333333",
                 "strokeWidth": 1.5,
@@ -1017,6 +1054,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 15,
             "ports": {
               "groups": {
                 "top": {
@@ -1100,10 +1138,9 @@
               ]
             },
             "id": "54864b68-7021-4826-b997-6e01bfedc12f",
-            "zIndex": 15,
             "data": {
               "type": "tm.Actor",
-              "name": "Actor",
+              "name": "Devices ",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
