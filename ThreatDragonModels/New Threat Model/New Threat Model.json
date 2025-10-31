@@ -259,7 +259,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -280,12 +281,31 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "441a2dd1-b789-4400-ae84-8081e92ce398",
+                  "title": "DOS of Plc and devices",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Denial of service",
+                  "description": "Setting pumps or dosing units to stay on via Auto mode misuse. This could overflow the plant, cause  system damage or contamination.",
+                  "mitigation": "Add PLC locks within the system like: safety limits, and emergency shutoff routines.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
             },
             "labels": [
               "Telemetry feedback"
@@ -314,7 +334,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -335,12 +356,31 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "5eb396fe-0fea-418b-8ad9-5946b094d809",
+                  "title": "Info disclosure of the sensor data ",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Man in the middle attack on telemetry traffic like the sensor readings . An example of this could be Fake or altered pH or “Innløpsmengde” readings",
+                  "mitigation": "Encrypt OT traffic, monitor for anomalies and redundancy in sensor data.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Sensor data"
@@ -358,6 +398,10 @@
               {
                 "x": 1080,
                 "y": 390
+              },
+              {
+                "x": 1030,
+                "y": 460
               },
               {
                 "x": 1022,
@@ -443,7 +487,7 @@
             ],
             "id": "48cfffb8-cb67-4a52-b22a-967892894a22",
             "source": {
-              "x": 560,
+              "x": 550,
               "y": 400
             },
             "target": {
@@ -452,7 +496,11 @@
             },
             "vertices": [
               {
-                "x": 600,
+                "x": 550,
+                "y": 600
+              },
+              {
+                "x": 590,
                 "y": 685
               }
             ]
@@ -804,8 +852,8 @@
           },
           {
             "position": {
-              "x": 340.5,
-              "y": 492
+              "x": 340,
+              "y": 490
             },
             "size": {
               "width": 160,
@@ -1093,6 +1141,19 @@
                   "new": false,
                   "number": 11,
                   "score": ""
+                },
+                {
+                  "id": "466cb2db-db41-4d66-85e1-7a976720e861",
+                  "title": "Elevation of privilege web interface And API",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege",
+                  "description": "Exploiting missing access control to gain admin-level rights. Attacker toggles Auto mode or alters dosing logic.",
+                  "mitigation": "Implement admin only operations confirmation. implementing the principle of least privilege and regularly patching and updating the system would be very helpful",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -1101,7 +1162,7 @@
                 "repudiation": 1,
                 "informationDisclosure": 1,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 0
+                "elevationOfPrivilege": 1
               }
             }
           },
@@ -1235,6 +1296,19 @@
                   "new": false,
                   "number": 2,
                   "score": ""
+                },
+                {
+                  "id": "b4c805e7-055b-457a-bb4b-01a2a720a0ac",
+                  "title": "EOP of the control server",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege",
+                  "description": "Unpatched control server software allows remote code execution. Full system takeover, manipulation of process control logic.",
+                  "mitigation": "Regular patching, service isolation, principle of least privilege.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
@@ -1243,14 +1317,14 @@
                 "repudiation": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 0,
-                "elevationOfPrivilege": 0
+                "elevationOfPrivilege": 1
               }
             }
           },
           {
             "position": {
               "x": 975,
-              "y": 610
+              "y": 600
             },
             "size": {
               "width": 170,
@@ -1261,8 +1335,8 @@
                 "text": "PLCs and Field Devices "
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1359,9 +1433,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "providesAuthentication": true,
-              "threats": []
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "24983f4c-23f9-4730-87c3-f5a86f8df1b8",
+                  "title": "DOS attack on field devices",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "",
+                  "description": "Malicious API traffic could overload PLC communication channels. This could then cause delayed or failed dosing or pump responses.",
+                  "mitigation": "Network segmentation, queue rate limits and PLC watchdog timers.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "repudiation": 0
+              }
             }
           }
         ]
@@ -1369,6 +1461,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "",
-    "threatTop": 13
+    "threatTop": 18
   }
 }
